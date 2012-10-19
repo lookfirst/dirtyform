@@ -26,7 +26,8 @@ Contrived example to get the point across
 
 DirtyForm = require('app/DirtyForm')
 
-saveButton = $('#saveButton')
+formdiv = $('#formdiv')
+saveButton = $('#saveButton', formdiv)
 
 enableButton = (obj) ->
     if obj
@@ -41,13 +42,13 @@ disableButton = (obj) ->
         return obj
 
 validate = (event, data) ->
-    if df.isDirty && $('#name').val() && $('#age').val() > 10
+    if df.isDirty && $('#name', formdiv).val() && $('#age', formdiv).val() > 10
         enableButton(saveButton)
     else
         disableButton(saveButton)
 
 df = new DirtyForm
-    form: $('formdiv')
+    form: formdiv
     both: (event, data) ->
         validate(event, data)
 ```
