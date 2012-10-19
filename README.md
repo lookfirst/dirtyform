@@ -11,16 +11,30 @@ There is also a ```both``` function which will be called in either case and it i
 
 DirtyForm = require('app/DirtyForm')
 
+saveButton = $('#saveButton')
+
+enableButton: (obj) ->
+    if obj
+        obj.removeClass('disabled')
+        obj.removeAttr('disabled')
+        return obj
+
+disableButton: (obj) ->
+    if obj
+        obj.addClass('disabled')
+        obj.attr('disabled', 'disabled')
+        return obj
+
+validate = (event, data) ->
+    if df.isDirty && formData.name && formData.age > 10
+        enableButton($('#saveButton'))
+    else
+        disableButton(saveButton)
+
 df = new DirtyForm
     form: $('formdiv')
     both: (event, data) ->
         validate(event, data)
-
-validate = (event, data) ->
-    if df.isDirty && formData.name && formData.age > 10
-        enableButton(saveButton)
-    else
-        disableButton(saveButton)
 ```
 
 The DirtyForm class is wrapped in [```simplified CommonJS wrapping```](http://requirejs.org/docs/whyamd.html#sugar) because that is what I use for my site.
