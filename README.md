@@ -13,13 +13,13 @@ DirtyForm = require('app/DirtyForm')
 
 saveButton = $('#saveButton')
 
-enableButton: (obj) ->
+enableButton = (obj) ->
     if obj
         obj.removeClass('disabled')
         obj.removeAttr('disabled')
         return obj
 
-disableButton: (obj) ->
+disableButton = (obj) ->
     if obj
         obj.addClass('disabled')
         obj.attr('disabled', 'disabled')
