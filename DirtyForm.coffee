@@ -65,6 +65,7 @@ define (require) ->
 				to: current
 				target: npt
 				event: event
+				isDirty: @isDirty
 
 			if @isDirty
 				form.data('dirty', true).trigger('dirty', vals)
