@@ -3,7 +3,9 @@ DirtyForm
 
 Good UX design dictates that a ```Save``` button is disabled until something changes or the data within a form is not valid. This little class makes it easy to implement.
 
-Define a container to ```watch```. If any form element (select, input, textarea, etc.) values within the container are modified from their original state, a ```dirty``` function is called. If all of the elements return to their original state, then the ```clean``` function is called. There is also a ```both``` function which will be called in either case and it is possible to check if things are dirty or not with ```dirtyForm.isDirty```.
+Define a container to watch for changes in. If any form element (select, input, textarea, etc.) values within the container are modified from their original state, a ```dirty``` function is called. If all of the elements return to their original state, then the ```clean``` function is called.
+
+There is also a ```both``` function which will be called in either case and it is possible to check if things are dirty or not with ```dirtyForm.isDirty```.
 
 ``` coffeescript
 
