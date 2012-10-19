@@ -12,9 +12,9 @@ This is a rather contrived example, but hopefully gets the point across...
 ``` html
 
 <div id="formdiv">
-<input type="text" name="name" id="name" />
-<input type="text" name="age" id="age" />
-<input type="submit" id="saveButton" />
+    <input type="text" name="name" id="name" />
+    <input type="text" name="age" id="age" />
+    <input type="submit" id="saveButton" />
 </div>
 ```
 
