@@ -21,7 +21,6 @@ validate = (event, data) ->
         enableButton(saveButton)
     else
         disableButton(saveButton)
-
 ```
 
 The DirtyForm class is wrapped in [```simplified CommonJS wrapping```](http://requirejs.org/docs/whyamd.html#sugar) because that is what I use for my site.
