@@ -7,6 +7,17 @@ Define a container to watch for changes in. If any form element (select, input, 
 
 There is also a ```both``` function which will be called in either case and it is possible to check if things are dirty or not with ```dirtyForm.isDirty```.
 
+This is a rather contrived example, but hopefully gets the point across...
+
+``` html
+
+<div id="formdiv">
+<input type="text" name="name" id="name" />
+<input type="text" name="age" id="age" />
+<input type="submit" id="saveButton" />
+</div>
+```
+
 ``` coffeescript
 
 DirtyForm = require('app/DirtyForm')
@@ -26,8 +37,8 @@ disableButton = (obj) ->
         return obj
 
 validate = (event, data) ->
-    if df.isDirty && formData.name && formData.age > 10
-        enableButton($('#saveButton'))
+    if df.isDirty && $('#name').val() && $('#age').val() > 10
+        enableButton(saveButton)
     else
         disableButton(saveButton)
 
