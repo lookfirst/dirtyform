@@ -41,8 +41,7 @@ define (require) ->
 
 		getValue: (input) ->
 			if input.is(':radio,checkbox')
-				val = input.attr('checked')
-				if val != undefined then val else false
+				input.prop('checked')
 			else
 				input.val()
 
