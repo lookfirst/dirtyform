@@ -30,16 +30,10 @@ formdiv = $('#formdiv')
 saveButton = $('#saveButton', formdiv)
 
 enableButton = (obj) ->
-    if obj
-        obj.removeClass('disabled')
-        obj.removeAttr('disabled')
-        return obj
+    obj.removeClass('disabled').removeAttr('disabled') if obj
 
 disableButton = (obj) ->
-    if obj
-        obj.addClass('disabled')
-        obj.attr('disabled', 'disabled')
-        return obj
+    obj.addClass('disabled').attr('disabled', 'disabled') if obj
 
 validate = (event, data) ->
     if df.isDirty && $('#name', formdiv).val() && $('#age', formdiv).val() > 10
