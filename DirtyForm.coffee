@@ -40,8 +40,8 @@ define (require) ->
 					form.on('dirty', @settings.dirty)
 
 		getValue: (input) ->
-			if input.is(':radio,checkbox')
-				input.prop('checked')
+			if input.is(':radio,:checkbox')
+				input.is(':checked')
 			else
 				input.val()
 
