@@ -1,2 +1,3 @@
 build:
-	coffee -c DirtyForm.coffee
+	npm install
+	node_modules/.bin/coffee -c DirtyForm.coffee

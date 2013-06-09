@@ -1,0 +1,7 @@
+{
+	"name": "dirtyform",
+	"version": "1.0.0",
+	"devDependencies": {
+		"coffee-script": "1.6.x"
+	}
+}

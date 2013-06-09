@@ -47,7 +47,7 @@ define (require) ->
 
 		inputChecker: (event) =>
 			npt = $(event.target)
-			form = npt.parents('.dirtyform')
+			form = npt.closest('.dirtyform')
 			initial = npt.data('initial')
 			current = @getValue(npt)
 			inputs = event.data.inputs
